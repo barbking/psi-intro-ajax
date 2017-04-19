@@ -1,25 +1,20 @@
+
 console.log('script src');
 
 $(document).ready(onReady);
 
-
-function onReady() {
-  console.log('in onReady');
-
-  // request data from omdb on the jaws
-  // when response comes back from the server
-  // run success function which will log response
-  $.ajax({
-    url: 'http://www.omdbapi.com/?t=jaws',
-    success: function(response) {
-      console.log('this is the response ->', response);
-      console.log('movie title ->', response.Title);
-      // console.log('movie actors ->', response.Actors);
-      // put title on the DOM
-      $('#movie-holder').append('<div class="movie-title">' + response.Title + '</div>');
-    }
-    // error: function(response) {
-    //   console.log('error case: response ->', response);
-    // }
-  });
+function onReady () {
 }
+
+$.ajax({
+  url: 'http://www.omdbapi.com/?t=Am%C3%A9lie&y=2001',
+  success: function(response) {
+    console.log('this is the response ->', response);
+    console.log('movie title ->', response.Title);
+    // console.log('movie actors ->', response.Actors);
+    // put title on the DOM
+    $('#movie').append('<h1>' + "Movie Title:  " + response.Title + '</h1>').marquee({ duration: 8000,gap: 600,duplicated: true});
+    $('#image-holder').append('<img src='+ response.Poster +'>');
+    $('#plot').append('<div>' + "Movie Summary:  " + response.Plot + '</div>');
+  }
+});

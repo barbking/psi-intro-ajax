@@ -1,0 +1,36 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background: url('https://a2elvinmqegs.files.wordpress.com/2013/10/amelie_247.jpg');
+}
+
+div {
+  float: center;
+  text-align: center;
+}
+
+#movie {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #735b08;
+}
+
+#image-holder{
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#plot {
+  width: 300px;
+  float: center top;
+  font-size: 20px;
+  font-style: bold;
+}
+
+img {
+  /*height: 400px;*/
+  padding: 20px;
+  top: 8px;
+  left: 16px;
+}
